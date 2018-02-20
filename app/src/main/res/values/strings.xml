@@ -1,27 +1,44 @@
 <resources>
-<string name="app_name">KnowYourBCquiz</string>
+    <string name="app_name">KnowYourBCquiz</string>
 
-<string name="question_1">Which contraception method is the only one protecting against STDs/STIs?</string>
-<string name="question_2">Which of the contraception methods are hormone based? (choose all that apply)</string>
-<string name="question_3">How often should you change a contraceptive patch? </string>
-<string name="question_4">When is the optimal time to take the first pill to be protected immediately?</string>
-<string name="question_5">When using a condom, you should use a lubricant based on:</string>
-<string name="question_6">Is condom reusable?</string>
+    <string name="question_1">Which contraception method is the only one protecting against STDs/STIs?</string>
+    <string name="question_2">Which of the contraception methods are hormone based? (choose all that apply)</string>
+    <string name="question_3">How often should you change a contraceptive patch? </string>
+    <string name="question_4">When is the optimal time to take the first pill to be protected immediately?</string>
+    <string name="question_5">When using a condom, you should use a lubricant based on:</string>
+    <string name="question_6">Is condom reusable?</string>
 
 
-<string name="finish_button">Finish</string>
-<string name="incomplete_toast">For final answer please answer all the questions.</string>
-<string name="more_info">For more information about different contraception methods click on the links below:</string>
-<string name="who"><a href="http://www.who.int/mediacentre/factsheets/fs351/en/">World health organization</a></string>
-<string name="your_life"><a href="https://www.your-life.com/en/contraception-methods/#methods-">Your life</a></string>
-<string name="reset_button">Reset</string>
-<string name="i_don_t_mind">I don\'t mind</string>
-<string name="final_answer_title">Final Answer:</string>
-<string name="final_answer_text_1">Seems like</string>
-<string name="final_answer_text_2">might be good for you!</string>
-<string name="final_answer_text_3">\n\nFor more information, please click the links below!</string>
-<string name="ok_button_final_answer">OK</string>
-<string name="enter_name">Enter Name (optional)</string>
+    <string name="finish_button">Finish</string>
+    <string name="incomplete_toast">For final answer please answer all the questions.</string>
+    <string name="more_info">For more information about different contraception methods click on the links below:</string>
+    <string name="who"><a href="http://www.who.int/mediacentre/factsheets/fs351/en/">World health organization</a></string>
+    <string name="your_life"><a href="https://www.your-life.com/en/contraception-methods/#methods-">Your life</a></string>
+    <string name="reset_button">Reset</string>
+    <string name="final_answer_title">Final Score:</string>
+    <string name="enter_name">Enter Name (optional)</string>
+    <string name="quiz_title"><u>Know Your Contraception method Quiz!</u></string>
+    <string name="hint_question_1">Type you answer here</string>
+    <string name="answer_2_1">The Pill</string>
+    <string name="answer_2_2">Male and female condom</string>
+    <string name="answer_2_3">Intrauterine device (IUD): copper containing</string>
+    <string name="answer_2_4">Vaginal ring</string>
+    <string name="answer_2_5">Fertility Awareness</string>
+    <string name="answer_3_1">Once a month</string>
+    <string name="answer_3_2">Once a week</string>
+    <string name="answer_3_3">Every 3 years</string>
+    <string name="answer_4_1">Anytime I want</string>
+    <string name="answer_6_1">yes!</string>
+    <string name="answer_6_2">No. Use it only once and then throw it away.</string>
+    <string name="answer_4_2">On the first day of the menstruation</string>
+    <string name="answer_4_3">On Sundays</string>
+    <string name="answer_5_1">Water/Silicon</string>
+    <string name="answer_5_2">Oil</string>
+    <string name="final_answer_1">, you have answered </string>
+    <string name="final_answer_2">/6 questions correctly!</string>
+    <string name="final_answer_3">\n\nFor more information about different contraception methods, please click the links below!</string>
+    <string name="ok_button_final_answer">OK</string>
+    <string name="hi_there">Hi there</string>
 
 
 </resources>

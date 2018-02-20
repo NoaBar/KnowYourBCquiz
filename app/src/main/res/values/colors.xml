@@ -3,17 +3,8 @@
     <color name="colorPrimary">#B6E2D3</color>
     <color name="colorPrimaryDark">#74BDCB</color>
     <color name="colorAccent">#FFA384</color>
-
     <color name="black">#000000</color>
-
-
-    <color name="pink">#EF7C8E</color>
-    <color name="roseWater">#D8A7B1</color>
-    <color name="mint">#B6E2D3</color>
     <color name="cream">#FAE8E0</color>
-    <color name="darkBrown">#513B41</color>
-
-    <color name="lightYellow">#EFE7BC</color>
     <color name="salmon">#FFA384</color>
     <color name="aqua">#74BDCB</color>
     <color name="darkaqua">#06b1c1</color>

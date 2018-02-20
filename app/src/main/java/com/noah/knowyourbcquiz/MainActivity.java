@@ -1,5 +1,7 @@
 package com.noah.knowyourbcquiz;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -155,18 +157,22 @@ public class MainActivity extends AppCompatActivity {
         String name = nameInput.getText().toString();
 
         if (name.matches("")) {
-            name = "Hi there";
+            name = getString(R.string.hi_there);
         }
 
         if (findIfAllQuestionsAnswered()) {
-            Toast toast = Toast.makeText(this, name + ", you have answered " + finalScore + "/6 questions correctly!", Toast.LENGTH_LONG);
-            LinearLayout layout = (LinearLayout) toast.getView();
-            if (layout.getChildCount() > 0) {
-                TextView tv = (TextView) layout.getChildAt(0);
-                tv.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
-            }
-            toast.setGravity(Gravity.CENTER, 0, 0);
-            toast.show();
+            AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+            alertDialog.setTitle(R.string.final_answer_title);
+            alertDialog.setMessage(name + getString(R.string.final_answer_1)+ " " + finalScore + getString(R.string.final_answer_2)+
+                    getString(R.string.final_answer_3));
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.ok_button_final_answer),
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+            alertDialog.show();
+
         } else {
             Toast toast = Toast.makeText(this, R.string.incomplete_toast, Toast.LENGTH_LONG);
             LinearLayout layout = (LinearLayout) toast.getView();
@@ -177,8 +183,8 @@ public class MainActivity extends AppCompatActivity {
             toast.setGravity(Gravity.CENTER, 0, 0);
             toast.show();
         }
-
     }
+
 
 
     /**

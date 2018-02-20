@@ -50,7 +50,7 @@
                 android:gravity="center_horizontal"
                 android:paddingEnd="20dp"
                 android:paddingStart="20dp"
-                android:text="Know Your Contraception method Quiz!" />
+                android:text="@string/quiz_title" />
 
             <EditText
                 android:id="@+id/name"
@@ -76,7 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/babyBlue"
-                android:hint="Type you answer here"
+                android:hint="@string/hint_question_1"
                 android:inputType="textCapWords"
                 android:onClick="answers_check" />
 
@@ -107,7 +107,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="answers_check"
-                    android:text="The Pill" />
+                    android:text="@string/answer_2_1" />
 
                 <CheckBox
                     android:id="@+id/answer_2_2"
@@ -115,7 +115,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="answers_check"
-                    android:text="Male and female condom" />
+                    android:text="@string/answer_2_2" />
 
                 <CheckBox
                     android:id="@+id/answer_2_3"
@@ -123,7 +123,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="answers_check"
-                    android:text="Intrauterine device (IUD): copper containing" />
+                    android:text="@string/answer_2_3" />
 
                 <CheckBox
                     android:id="@+id/answer_2_4"
@@ -131,7 +131,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="answers_check"
-                    android:text="Vaginal ring" />
+                    android:text="@string/answer_2_4" />
 
                 <CheckBox
                     android:id="@+id/answer_2_5"
@@ -139,7 +139,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="answers_check"
-                    android:text="Fertility Awareness" />
+                    android:text="@string/answer_2_5" />
             </LinearLayout>
 
 
@@ -167,21 +167,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="answers_check"
-                    android:text="Once a month" />
+                    android:text="@string/answer_3_1" />
 
                 <RadioButton
                     android:id="@+id/answer_3_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="answers_check"
-                    android:text="Once a week" />
+                    android:text="@string/answer_3_2" />
 
                 <RadioButton
                     android:id="@+id/answer_3_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="answers_check"
-                    android:text="Every 3 years" />
+                    android:text="@string/answer_3_3" />
             </RadioGroup>
 
             <TextView
@@ -208,21 +208,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="answers_check"
-                    android:text="Anytime I want" />
+                    android:text="@string/answer_4_1" />
 
                 <RadioButton
                     android:id="@+id/answer_4_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="answers_check"
-                    android:text="At the first day of my menstruation" />
+                    android:text="@string/answer_4_2" />
 
                 <RadioButton
                     android:id="@+id/answer_4_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="answers_check"
-                    android:text="On Sundays" />
+                    android:text="@string/answer_4_3" />
             </RadioGroup>
 
             <TextView
@@ -249,14 +249,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="answers_check"
-                    android:text="Water/Silicon" />
+                    android:text="@string/answer_5_1" />
 
                 <RadioButton
                     android:id="@+id/answer_5_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="answers_check"
-                    android:text="Oil" />
+                    android:text="@string/answer_5_2" />
 
 
             </RadioGroup>
@@ -285,14 +285,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="answers_check"
-                    android:text="yes!" />
+                    android:text="@string/answer_6_1" />
 
                 <RadioButton
                     android:id="@+id/answer_6_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="answers_check"
-                    android:text="No. Use it only once and then throw it away." />
+                    android:text="@string/answer_6_2" />
             </RadioGroup>
 
 
