@@ -243,7 +243,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="answers_check"
-                    android:text="Water/silicon" />
+                    android:text="Water/Silicon" />
 
                 <RadioButton
                     android:id="@+id/answer_5_2"
