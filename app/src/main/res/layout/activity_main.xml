@@ -15,17 +15,17 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-            <ImageView
-                style="@style/images"
-                android:src="@drawable/condoms" />
+        <ImageView
+            style="@style/images"
+            android:src="@drawable/condoms" />
 
-            <ImageView
-                style="@style/images"
-                android:src="@drawable/pillsround" />
+        <ImageView
+            style="@style/images"
+            android:src="@drawable/pillsround" />
 
-            <ImageView
-                style="@style/images"
-                android:src="@drawable/iudsmall" />
+        <ImageView
+            style="@style/images"
+            android:src="@drawable/iudsmall" />
 
 
     </LinearLayout>
@@ -41,22 +41,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/title"
                 style="@style/questions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingEnd="20dp"
                 android:gravity="center_horizontal"
+                android:paddingEnd="20dp"
                 android:paddingStart="20dp"
                 android:text="Know Your Contraception method Quiz!" />
 
             <EditText
                 android:id="@+id/name"
                 style="@style/questions"
-                android:background="@color/babyBlue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/babyBlue"
                 android:hint="@string/enter_name"
                 android:inputType="textCapWords" />
 
@@ -72,11 +73,12 @@
             <EditText
                 android:id="@+id/answer_1"
                 style="@style/questions"
-                android:background="@color/babyBlue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/babyBlue"
                 android:hint="Type you answer here"
-                android:inputType="textCapWords" />
+                android:inputType="textCapWords"
+                android:onClick="answers_check" />
 
 
             <TextView
@@ -114,6 +116,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="answers_check"
                     android:text="Male and female condom" />
+
                 <CheckBox
                     android:id="@+id/answer_2_3"
                     style="@style/checkbox"
@@ -121,6 +124,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="answers_check"
                     android:text="Intrauterine device (IUD): copper containing" />
+
                 <CheckBox
                     android:id="@+id/answer_2_4"
                     style="@style/checkbox"
@@ -128,6 +132,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="answers_check"
                     android:text="Vaginal ring" />
+
                 <CheckBox
                     android:id="@+id/answer_2_5"
                     style="@style/checkbox"
@@ -170,6 +175,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="answers_check"
                     android:text="Once a week" />
+
                 <RadioButton
                     android:id="@+id/answer_3_3"
                     android:layout_width="wrap_content"
@@ -288,7 +294,6 @@
                     android:onClick="answers_check"
                     android:text="No. Use it only once and then throw it away." />
             </RadioGroup>
-
 
 
             <Button

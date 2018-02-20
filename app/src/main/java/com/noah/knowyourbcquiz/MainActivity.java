@@ -52,22 +52,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         nameInput = (EditText) findViewById(R.id.name);
-        String name = nameInput.getText().toString();
 
         answer_1 = (EditText) findViewById(R.id.answer_1);
-        String answer_1s = answer_1.getText().toString();
 
         answer_2_1 = (CheckBox) findViewById(R.id.answer_2_1);
-        boolean answer_2_1b = answer_2_1.isChecked();
         answer_2_2 = (CheckBox) findViewById(R.id.answer_2_2);
-        boolean answer_2_2b = answer_2_2.isChecked();
         answer_2_3 = (CheckBox) findViewById(R.id.answer_2_3);
-        boolean answer_2_3b = answer_2_1.isChecked();
         answer_2_4 = (CheckBox) findViewById(R.id.answer_2_4);
-        boolean answer_2_4b = answer_2_1.isChecked();
         answer_2_5 = (CheckBox) findViewById(R.id.answer_2_5);
-        boolean answer_2_5b = answer_2_1.isChecked();
-
 
         answer_3 = (RadioGroup) findViewById(R.id.answer_3);
         answer_3_1 = (RadioButton) findViewById(R.id.answer_3_1);
@@ -95,20 +87,19 @@ public class MainActivity extends AppCompatActivity {
     public void answers_check(View view) {
 
         finalScore = 0;
-        answer_1 = (EditText) findViewById(R.id.answer_1);
         String answer_1s = answer_1.getText().toString();
 
-        answer_2_2 = (CheckBox) findViewById(R.id.answer_2_2);
+        boolean answer_2_1b = answer_2_1.isChecked();
+        boolean answer_2_4b = answer_2_4.isChecked();
         boolean answer_2_2b = answer_2_2.isChecked();
-
-        answer_2_4 = (CheckBox) findViewById(R.id.answer_2_4);
-        boolean answer_2_4b = answer_2_1.isChecked();
+        boolean answer_2_3b = answer_2_3.isChecked();
+        boolean answer_2_5b = answer_2_5.isChecked();
 
         if (answer_1s.matches("Condom")) {
             finalScore++;
         }
 
-        if (answer_2_2.isChecked() && answer_2_4.isChecked()) {
+        if (answer_2_1b && answer_2_4b && (!answer_2_2b) && (!answer_2_3b) && (!answer_2_5b)) {
             finalScore++;
         }
         if (answer_3_2.isChecked()) {
@@ -133,23 +124,15 @@ public class MainActivity extends AppCompatActivity {
      * This method checks if all the questions are answered.
      */
     public boolean findIfAllQuestionsAnswered() {
-        answer_1 = (EditText) findViewById(R.id.answer_1);
         String answer_1s = answer_1.getText().toString();
-
-        answer_2_1 = (CheckBox) findViewById(R.id.answer_2_1);
         boolean answer_2_1b = answer_2_1.isChecked();
-        answer_2_2 = (CheckBox) findViewById(R.id.answer_2_2);
         boolean answer_2_2b = answer_2_2.isChecked();
-        answer_2_3 = (CheckBox) findViewById(R.id.answer_2_3);
-        boolean answer_2_3b = answer_2_1.isChecked();
-        answer_2_4 = (CheckBox) findViewById(R.id.answer_2_4);
-        boolean answer_2_4b = answer_2_1.isChecked();
-        answer_2_5 = (CheckBox) findViewById(R.id.answer_2_5);
-        boolean answer_2_5b = answer_2_1.isChecked();
-
+        boolean answer_2_3b = answer_2_3.isChecked();
+        boolean answer_2_4b = answer_2_4.isChecked();
+        boolean answer_2_5b = answer_2_5.isChecked();
 
         if (answer_1s.matches("") ||
-                ((!answer_2_1b) && (!answer_2_2b) && (!answer_2_3b) && (!answer_2_4b) && (!answer_2_5b)) ||
+                (!answer_2_1b) && (!answer_2_2b) && (!answer_2_3b) && (!answer_2_4b) && (!answer_2_5b) ||
                 answer_3.getCheckedRadioButtonId() == -1 ||
                 answer_4.getCheckedRadioButtonId() == -1 ||
                 answer_5.getCheckedRadioButtonId() == -1 ||
@@ -171,8 +154,12 @@ public class MainActivity extends AppCompatActivity {
         nameInput = (EditText) findViewById(R.id.name);
         String name = nameInput.getText().toString();
 
+        if (name.matches("")) {
+            name = "Hi there";
+        }
+
         if (findIfAllQuestionsAnswered()) {
-            Toast toast = Toast.makeText(this, name + ",You have answered " + finalScore + "/6 questions correctly!", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(this, name + ", you have answered " + finalScore + "/6 questions correctly!", Toast.LENGTH_LONG);
             LinearLayout layout = (LinearLayout) toast.getView();
             if (layout.getChildCount() > 0) {
                 TextView tv = (TextView) layout.getChildAt(0);
@@ -215,7 +202,18 @@ public class MainActivity extends AppCompatActivity {
 
         ScrollView scrollView = (ScrollView) findViewById(R.id.scrollView);
         scrollView.smoothScrollTo(0, 0);
+    }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putInt("finalScore", finalScore);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        finalScore = savedInstanceState.getInt("finalScore", finalScore);
 
     }
 
