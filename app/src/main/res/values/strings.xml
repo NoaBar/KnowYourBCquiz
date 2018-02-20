@@ -1,0 +1,43 @@
+<resources>
+<string name="app_name">BCquiz</string>
+<string name="disclaimer_message">This quiz is a programming exercise! \n\nTo find the best contraception method for you please read more online, and most importantly consult with your doctor.</string>
+<string name="disclaimer_title">Disclaimer</string>
+<string name="disclaimer_button">I Agree</string>
+<string name="m_f_condom">Male/Female Condom</string>
+<string name="pills">Contraceptive Pills</string>
+<string name="non_hormonal_iud">Non-hormonal IUD</string>
+
+<string name="iud_grade">0</string>
+<string name="pills_grade">0</string>
+<string name="condom_grade">0</string>
+
+<string name="question_1">Which contraception method is the only one protecting against STDs/STIs?</string>
+<string name="question_2">Which of the contraception methods are hormone based? (choose all that apply)</string>
+<string name="question_3">How often should you change a </string>
+<string name="question_4">Do you experience pain or heavy flow while menstruating?</string>
+<string name="question_5">Do you plan to conceive in the very near future?</string>
+<string name="question_6">Are you over the age of 35 and smoke regularly?</string>
+<string name="question_7">Do you have a fixed daily routine?</string>
+<string name="question_8">Do you tend to be forgetful?</string>
+<string name="yes">Yes</string>
+<string name="no">No</string>
+
+
+<string name="finish_button">Finish</string>
+<string name="incomplete_toast">For final answer please answer all the questions.</string>
+<string name="more_info">For more information about different contraception methods click on the links below:</string>
+<string name="who"><a href="http://www.who.int/mediacentre/factsheets/fs351/en/">World health organization</a></string>
+<string name="your_life"><a href="https://www.your-life.com/en/contraception-methods/#methods-">Your life</a></string>
+<string name="reset_button">Reset</string>
+<string name="i_don_t_mind">I don\'t mind</string>
+<string name="hormonal">Hormonal</string>
+<string name="non_hormonal">Non-hormonal</string>
+<string name="final_answer_title">Final Answer:</string>
+<string name="final_answer_text_1">Seems like</string>
+<string name="final_answer_text_2">might be good for you!</string>
+<string name="final_answer_text_3">\n\nFor more information, please click the links below!</string>
+<string name="ok_button_final_answer">OK</string>
+<string name="enter_name">Enter Name (optional)</string>
+
+
+</resources>

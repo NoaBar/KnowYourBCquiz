@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context="com.noah.knowyourbcquiz.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+
+        <LinearLayout style="@style/BCTypesLayout">
+
+            <ImageView
+                style="@style/images"
+                android:src="@drawable/condoms" />
+
+            <TextView
+                android:id="@+id/condomGrade"
+                style="@style/titles"
+                android:text="@string/condom_grade" />
+
+            <TextView
+                style="@style/titles"
+                android:text="@string/m_f_condom" />
+
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/BCTypesLayout">
+
+            <ImageView
+                style="@style/images"
+                android:src="@drawable/pillsround" />
+
+            <TextView
+                android:id="@+id/pillsGrade"
+                style="@style/titles"
+                android:text="@string/pills_grade" />
+
+            <TextView
+                style="@style/titles"
+                android:text="@string/pills" />
+
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/BCTypesLayout">
+
+            <ImageView
+                style="@style/images"
+                android:src="@drawable/iudsmall" />
+
+            <TextView
+                android:id="@+id/iudGrade"
+                style="@style/titles"
+                android:text="@string/iud_grade" />
+
+            <TextView
+                style="@style/titles"
+                android:text="@string/non_hormonal_iud" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/name"
+                style="@style/questions"
+                android:background="@color/babyBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_name"
+                android:inputType="textCapWords" />
+
+            <TextView
+                android:id="@+id/question_1"
+                style="@style/questions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:text="@string/question_1" />
+
+            <RadioGroup
+                android:id="@+id/answer_1"
+                style="@style/answers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp">
+
+                <RadioButton
+                    android:id="@+id/answer_1_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="answers_check"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/answer_1_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="answers_check"
+                    android:text="@string/no" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/question_2"
+                style="@style/questions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/question_2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/babyBlue"
+                android:orientation="vertical"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp">
+
+                <CheckBox
+                    android:id="@+id/answer_2_non_hormonal"
+                    style="@style/checkbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="answers_check"
+                    android:text="@string/non_hormonal" />
+
+                <CheckBox
+                    android:id="@+id/answer_2_hormonal"
+                    style="@style/checkbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="answers_check"
+                    android:text="@string/hormonal" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/question_3"
+                style="@style/questions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/question_3" />
+
+            <RadioGroup
+                android:id="@+id/answer_3"
+                style="@style/answers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp">
+
+                <RadioButton
+                    android:id="@+id/answer_3_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="answers_check"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/answer_3_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="answers_check"
+                    android:text="@string/no" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/question_4"
+                style="@style/questions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/question_4" />
+
+            <RadioGroup
+                android:id="@+id/answer_4"
+                style="@style/answers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp">
+
+                <RadioButton
+                    android:id="@+id/answer_4_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="answers_check"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/answer_4_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="answers_check"
+                    android:text="@string/no" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/question_5"
+                style="@style/questions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/question_5" />
+
+            <RadioGroup
+                android:id="@+id/answer_5"
+                style="@style/answers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp">
+
+                <RadioButton
+                    android:id="@+id/answer_5_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="answers_check"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/answer_5_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="answers_check"
+                    android:text="@string/no" />
+
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/question_6"
+                style="@style/questions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/question_6" />
+
+            <RadioGroup
+                android:id="@+id/answer_6"
+                style="@style/answers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp">
+
+                <RadioButton
+                    android:id="@+id/answer_6_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="answers_check"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/answer_6_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="answers_check"
+                    android:text="@string/no" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/question_7"
+                style="@style/questions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/question_7" />
+
+            <RadioGroup
+                android:id="@+id/answer_7"
+                style="@style/answers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp">
+
+                <RadioButton
+                    android:id="@+id/answer_7_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="answers_check"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/answer_7_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="answers_check"
+                    android:text="@string/no" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/question_8"
+                style="@style/questions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/question_8" />
+
+            <RadioGroup
+                android:id="@+id/answer_8"
+                style="@style/answers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp">
+
+                <RadioButton
+                    android:id="@+id/answer_8_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="answers_check"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/answer_8_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="answers_check"
+                    android:text="@string/no" />
+            </RadioGroup>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/salmon"
+                android:onClick="finish"
+                android:text="@string/finish_button"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/peach"
+                android:onClick="resetGrade"
+                android:text="@string/reset_button"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/more_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/more_info"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/link_your_life"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:text="@string/your_life"
+                android:textColorLink="@color/darkaqua" />
+
+            <TextView
+                android:id="@+id/link_who"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:text="@string/who"
+                android:textColorLink="@color/darkaqua" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
