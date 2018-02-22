@@ -4,9 +4,9 @@
     <string name="question_1">Which contraception method is the only one protecting against STDs/STIs?</string>
     <string name="question_2">Which of the contraception methods are hormone based? (choose all that apply)</string>
     <string name="question_3">How often should you change a contraceptive patch? </string>
-    <string name="question_4">When is the optimal time to take the first pill to be protected immediately?</string>
+    <string name="question_4">When is the optimal time to take the first pill in order to be protected immediately?</string>
     <string name="question_5">When using a condom, you should use a lubricant based on:</string>
-    <string name="question_6">Is condom reusable?</string>
+    <string name="question_6">Is a male condom reusable?</string>
 
 
     <string name="finish_button">Finish</string>
@@ -28,7 +28,7 @@
     <string name="answer_3_2">Once a week</string>
     <string name="answer_3_3">Every 3 years</string>
     <string name="answer_4_1">Anytime I want</string>
-    <string name="answer_6_1">yes!</string>
+    <string name="answer_6_1">Yes!</string>
     <string name="answer_6_2">No. Use it only once and then throw it away.</string>
     <string name="answer_4_2">On the first day of the menstruation.</string>
     <string name="answer_4_3">On Sundays</string>
