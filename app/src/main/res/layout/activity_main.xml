@@ -9,9 +9,6 @@
     android:padding="5dp"
     tools:context="com.noah.knowyourbcquiz.MainActivity">
 
-    <!-- TODO: clean xml.
-TODO: check caps text
--->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -68,8 +65,6 @@ TODO: check caps text
             <EditText
                 android:id="@+id/answer_1"
                 style="@style/questions"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:background="@color/babyBlue"
                 android:hint="@string/hint_question_1"
                 android:inputType="textCapWords"
@@ -80,8 +75,6 @@ TODO: check caps text
             <TextView
                 android:id="@+id/question_2"
                 style="@style/questions"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="@string/question_2" />
 
             <LinearLayout
@@ -206,8 +199,8 @@ TODO: check caps text
 
             <RadioGroup
                 android:id="@+id/answer_6"
-                style="@style/answers"
                 android:orientation="vertical"
+                style="@style/answers"
                >
 
                 <RadioButton
@@ -218,6 +211,7 @@ TODO: check caps text
                 <RadioButton
                     android:id="@+id/answer_6_2"
                     style="@style/answers"
+                    android:singleLine="false"
                     android:text="@string/answer_6_2" />
             </RadioGroup>
 
@@ -226,6 +220,7 @@ TODO: check caps text
                 android:backgroundTint="@color/salmon"
                 android:onClick="finish"
                 android:text="@string/finish_button"
+                android:layout_marginTop="10dp"
                 style="@style/buttons" />
 
             <Button
@@ -237,7 +232,6 @@ TODO: check caps text
 
             <TextView
                 android:id="@+id/more_info"
-                android:autoLink="web"
                 android:text="@string/more_info"
                 android:textColor="@color/black"
                 style="@style/links" />

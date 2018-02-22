@@ -15,6 +15,7 @@ import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.text.method.LinkMovementMethod;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,21 +32,15 @@ public class MainActivity extends AppCompatActivity {
     CheckBox answer_2_5;
 
     RadioGroup answer_3;
-    RadioButton answer_3_1;
     RadioButton answer_3_2;
-    RadioButton answer_3_3;
 
     RadioGroup answer_4;
-    RadioButton answer_4_1;
     RadioButton answer_4_2;
-    RadioButton answer_4_3;
 
     RadioGroup answer_5;
     RadioButton answer_5_1;
-    RadioButton answer_5_2;
 
     RadioGroup answer_6;
-    RadioButton answer_6_1;
     RadioButton answer_6_2;
 
     boolean showFinalScore = false;
@@ -58,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
 
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
+        TextView who = (TextView) findViewById(R.id.link_who);
+        who.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView yourLife = (TextView) findViewById(R.id.link_your_life);
+        yourLife.setMovementMethod(LinkMovementMethod.getInstance());
+
         nameInput = (EditText) findViewById(R.id.name);
 
         answer_1 = (EditText) findViewById(R.id.answer_1);
@@ -69,21 +70,15 @@ public class MainActivity extends AppCompatActivity {
         answer_2_5 = (CheckBox) findViewById(R.id.answer_2_5);
 
         answer_3 = (RadioGroup) findViewById(R.id.answer_3);
-        answer_3_1 = (RadioButton) findViewById(R.id.answer_3_1);
         answer_3_2 = (RadioButton) findViewById(R.id.answer_3_2);
-        answer_3_3 = (RadioButton) findViewById(R.id.answer_3_3);
 
         answer_4 = (RadioGroup) findViewById(R.id.answer_4);
-        answer_4_1 = (RadioButton) findViewById(R.id.answer_4_1);
         answer_4_2 = (RadioButton) findViewById(R.id.answer_4_2);
-        answer_4_3 = (RadioButton) findViewById(R.id.answer_4_3);
 
         answer_5 = (RadioGroup) findViewById(R.id.answer_5);
         answer_5_1 = (RadioButton) findViewById(R.id.answer_5_1);
-        answer_5_2 = (RadioButton) findViewById(R.id.answer_5_2);
 
         answer_6 = (RadioGroup) findViewById(R.id.answer_6);
-        answer_6_1 = (RadioButton) findViewById(R.id.answer_6_1);
         answer_6_2 = (RadioButton) findViewById(R.id.answer_6_2);
 
     }
@@ -150,7 +145,6 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
     }
-
 
     /**
      * This method is called when finish button is clicked.
@@ -225,10 +219,6 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
 
         outState.putBoolean("showFinalScore", showFinalScore);
-
-
-
-
     }
 
     @Override

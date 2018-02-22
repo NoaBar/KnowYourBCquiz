@@ -17,7 +17,7 @@
     <string name="reset_button">Reset</string>
     <string name="final_answer_title">Final Score:</string>
     <string name="enter_name">Enter Name (optional)</string>
-    <string name="quiz_title"><u>Know Your Contraception method Quiz!</u></string>
+    <string name="quiz_title"><u>Know Your Contraception Method Quiz!</u></string>
     <string name="hint_question_1">Type you answer here</string>
     <string name="answer_2_1">The Pill</string>
     <string name="answer_2_2">Male and female condom</string>
@@ -30,7 +30,7 @@
     <string name="answer_4_1">Anytime I want</string>
     <string name="answer_6_1">yes!</string>
     <string name="answer_6_2">No. Use it only once and then throw it away.</string>
-    <string name="answer_4_2">On the first day of the menstruation</string>
+    <string name="answer_4_2">On the first day of the menstruation.</string>
     <string name="answer_4_3">On Sundays</string>
     <string name="answer_5_1">Water/Silicon</string>
     <string name="answer_5_2">Oil</string>
