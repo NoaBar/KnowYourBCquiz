@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -47,11 +48,15 @@ public class MainActivity extends AppCompatActivity {
     RadioButton answer_6_1;
     RadioButton answer_6_2;
 
+    boolean showFinalScore = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         nameInput = (EditText) findViewById(R.id.name);
 
@@ -80,16 +85,16 @@ public class MainActivity extends AppCompatActivity {
         answer_6 = (RadioGroup) findViewById(R.id.answer_6);
         answer_6_1 = (RadioButton) findViewById(R.id.answer_6_1);
         answer_6_2 = (RadioButton) findViewById(R.id.answer_6_2);
+
     }
 
     /**
-     * This method is called when all the radioButtons/checkBoxes are clicked (to see how the grade changes online)
-     * and the finish button is clicked.
+     * This method sums the right answered questions and stores the score in "finalScore"
      */
-    public void answers_check(View view) {
+    public void answers_check() {
 
         finalScore = 0;
-        String answer_1s = answer_1.getText().toString();
+        String answer_1s = answer_1.getText().toString().toLowerCase();
 
         boolean answer_2_1b = answer_2_1.isChecked();
         boolean answer_2_4b = answer_2_4.isChecked();
@@ -97,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         boolean answer_2_3b = answer_2_3.isChecked();
         boolean answer_2_5b = answer_2_5.isChecked();
 
-        if (answer_1s.matches("Condom")) {
+        if (answer_1s.matches("condom")||answer_1s.matches("condoms")||answer_1s.matches("a condom")) {
             finalScore++;
         }
 
@@ -153,6 +158,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void finish(View view) {
 
+        answers_check();
+
         nameInput = (EditText) findViewById(R.id.name);
         String name = nameInput.getText().toString();
 
@@ -169,9 +176,11 @@ public class MainActivity extends AppCompatActivity {
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
+                            showFinalScore = false;
                         }
                     });
             alertDialog.show();
+            showFinalScore = true;
 
         } else {
             Toast toast = Toast.makeText(this, R.string.incomplete_toast, Toast.LENGTH_LONG);
@@ -214,12 +223,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         outState.putInt("finalScore", finalScore);
         super.onSaveInstanceState(outState);
+
+        outState.putBoolean("showFinalScore", showFinalScore);
+
+
+
+
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         finalScore = savedInstanceState.getInt("finalScore", finalScore);
+        showFinalScore = savedInstanceState.getBoolean("showFinalScore", showFinalScore);
+
+        if (showFinalScore){
+            finish(null);
+        }
 
     }
 
