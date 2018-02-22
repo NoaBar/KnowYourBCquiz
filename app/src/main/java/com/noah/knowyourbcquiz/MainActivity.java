@@ -153,7 +153,8 @@ public class MainActivity extends AppCompatActivity {
     public void finish(View view) {
 
         answers_check();
-
+        answer_1.clearFocus();
+        
         nameInput = (EditText) findViewById(R.id.name);
         String name = nameInput.getText().toString();
 
