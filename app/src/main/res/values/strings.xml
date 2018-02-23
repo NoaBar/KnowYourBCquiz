@@ -39,6 +39,9 @@
     <string name="final_answer_3">\n\nFor more information about different contraception methods, please click the links below!</string>
     <string name="ok_button_final_answer">OK</string>
     <string name="hi_there">Hi there</string>
+    <string name="colorful_condoms_img">Colorful condoms</string>
+    <string name="pills_img">Pills</string>
+    <string name="iud_uterus_img">IUD holding hands with a uterus</string>
 
 
 </resources>

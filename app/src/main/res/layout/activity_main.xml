@@ -18,15 +18,18 @@
 
         <ImageView
             style="@style/images"
-            android:src="@drawable/condoms" />
+            android:src="@drawable/condoms"
+            android:contentDescription="@string/colorful_condoms_img"/>
 
         <ImageView
             style="@style/images"
-            android:src="@drawable/pillsround" />
+            android:src="@drawable/pillsround"
+            android:contentDescription="@string/pills_img"/>
 
         <ImageView
             style="@style/images"
-            android:src="@drawable/iudsmall" />
+            android:src="@drawable/iudsmall"
+            android:contentDescription="@string/iud_uterus_img"/>
 
 
     </LinearLayout>
