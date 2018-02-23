@@ -1,7 +1,5 @@
 package com.noah.knowyourbcquiz;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -18,7 +16,6 @@ import android.widget.Toast;
 import android.text.method.LinkMovementMethod;
 
 public class MainActivity extends AppCompatActivity {
-    boolean showFinalScore = false;
     int finalScore = 0;
     EditText nameInput;
 
@@ -163,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
                 TextView tv = (TextView) layout.getChildAt(0);
                 tv.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
             }
+
             toast.setGravity(Gravity.CENTER, 0, 0);
             toast.show();
 
@@ -177,7 +175,6 @@ public class MainActivity extends AppCompatActivity {
             toast.show();
         }
     }
-
 
     /**
      * This method is called when reset button is clicked.
@@ -203,20 +200,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         outState.putInt("finalScore", finalScore);
         super.onSaveInstanceState(outState);
-        outState.putBoolean("showFinalScore", showFinalScore);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         finalScore = savedInstanceState.getInt("finalScore", finalScore);
-        showFinalScore = savedInstanceState.getBoolean("showFinalScore", showFinalScore);
-
-        if (showFinalScore) {
-            finish(null);
-        }
-
     }
-
-
 }
