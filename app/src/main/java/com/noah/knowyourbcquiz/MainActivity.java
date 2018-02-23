@@ -18,9 +18,8 @@ import android.widget.Toast;
 import android.text.method.LinkMovementMethod;
 
 public class MainActivity extends AppCompatActivity {
-
+    boolean showFinalScore = false;
     int finalScore = 0;
-
     EditText nameInput;
 
     EditText answer_1;
@@ -42,8 +41,6 @@ public class MainActivity extends AppCompatActivity {
 
     RadioGroup answer_6;
     RadioButton answer_6_2;
-
-    boolean showFinalScore = false;
 
 
     @Override
@@ -87,9 +84,8 @@ public class MainActivity extends AppCompatActivity {
      * This method sums the right answered questions and stores the score in "finalScore"
      */
     public void answers_check() {
-
         finalScore = 0;
-        String answer_1s = answer_1.getText().toString().toLowerCase();
+        String answer_1s = answer_1.getText().toString().trim().toLowerCase();
 
         boolean answer_2_1b = answer_2_1.isChecked();
         boolean answer_2_4b = answer_2_4.isChecked();
@@ -121,7 +117,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     /**
      * This method checks if all the questions are answered.
      */
@@ -149,13 +144,10 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method is called when finish button is clicked.
      */
-
     public void finish(View view) {
-
         answers_check();
         nameInput.clearFocus();
         answer_1.clearFocus();
-        
         nameInput = (EditText) findViewById(R.id.name);
         String name = nameInput.getText().toString();
 
@@ -190,15 +182,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-
     /**
      * This method is called when reset button is clicked.
      */
-
     public void resetGrade(View view) {
         finalScore = 0;
-
         nameInput.getText().clear();
         answer_1.getText().clear();
         answer_2_1.setChecked(false);
@@ -210,7 +198,6 @@ public class MainActivity extends AppCompatActivity {
         answer_4.clearCheck();
         answer_5.clearCheck();
         answer_6.clearCheck();
-
         ScrollView scrollView = (ScrollView) findViewById(R.id.scrollView);
         scrollView.smoothScrollTo(0, 0);
     }
@@ -219,7 +206,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         outState.putInt("finalScore", finalScore);
         super.onSaveInstanceState(outState);
-
         outState.putBoolean("showFinalScore", showFinalScore);
     }
 

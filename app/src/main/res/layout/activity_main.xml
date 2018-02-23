@@ -12,7 +12,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:layout_weight="1"
         android:orientation="horizontal">
 
@@ -35,7 +35,7 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:layout_weight="3">
 
         <LinearLayout
@@ -55,7 +55,8 @@
                 android:layout_height="wrap_content"
                 android:background="#fff"
                 android:hint="@string/enter_name"
-                android:inputType="textCapWords" />
+                android:inputType="textCapWords"
+                />
 
             <TextView
                 android:id="@+id/question_1"
@@ -68,7 +69,7 @@
                 android:background="@color/babyBlue"
                 android:hint="@string/hint_question_1"
                 android:inputType="textCapWords"
-                android:layout_marginTop="0dp"
+                android:layout_marginTop="@dimen/zero"
                 />
 
 
@@ -80,12 +81,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp"
+                android:layout_marginEnd="@dimen/ten"
+                android:layout_marginStart="@dimen/ten"
                 android:background="@color/babyBlue"
                 android:orientation="vertical"
-                android:paddingEnd="10dp"
-                android:paddingStart="10dp">
+                android:paddingEnd="@dimen/ten"
+                android:paddingStart="@dimen/ten">
 
                 <CheckBox
                     android:id="@+id/answer_2_1"
@@ -220,7 +221,7 @@
                 android:backgroundTint="@color/salmon"
                 android:onClick="finish"
                 android:text="@string/finish_button"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/ten"
                 style="@style/buttons" />
 
             <Button
@@ -246,7 +247,7 @@
             <TextView
                 style="@style/links"
                 android:id="@+id/link_who"
-                android:paddingBottom="20dp"
+                android:paddingBottom="@dimen/twenty"
                 android:text="@string/who"
                 android:textColorLink="@color/darkaqua" />
 
