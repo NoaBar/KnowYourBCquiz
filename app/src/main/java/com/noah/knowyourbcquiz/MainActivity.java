@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         boolean answer_2_3b = answer_2_3.isChecked();
         boolean answer_2_5b = answer_2_5.isChecked();
 
-        if (answer_1s.matches("condom")||answer_1s.matches("condoms")||answer_1s.matches("a condom")) {
+        if (answer_1s.matches("condom") || answer_1s.matches("condoms") || answer_1s.matches("a condom")) {
             finalScore++;
         }
 
@@ -156,19 +156,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (findIfAllQuestionsAnswered()) {
-            AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
-            alertDialog.setTitle(R.string.final_answer_title);
-            alertDialog.setMessage(name + getString(R.string.final_answer_1)+ " " + finalScore + getString(R.string.final_answer_2)+
-                    getString(R.string.final_answer_3));
-            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.ok_button_final_answer),
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                            showFinalScore = false;
-                        }
-                    });
-            alertDialog.show();
-            showFinalScore = true;
+            Toast toast = Toast.makeText(this, name + getString(R.string.final_answer_1) + " " + finalScore + getString(R.string.final_answer_2) +
+                    getString(R.string.final_answer_3), Toast.LENGTH_LONG);
+            LinearLayout layout = (LinearLayout) toast.getView();
+            if (layout.getChildCount() > 0) {
+                TextView tv = (TextView) layout.getChildAt(0);
+                tv.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
+            }
+            toast.setGravity(Gravity.CENTER, 0, 0);
+            toast.show();
 
         } else {
             Toast toast = Toast.makeText(this, R.string.incomplete_toast, Toast.LENGTH_LONG);
@@ -181,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
             toast.show();
         }
     }
+
 
     /**
      * This method is called when reset button is clicked.
@@ -215,7 +212,7 @@ public class MainActivity extends AppCompatActivity {
         finalScore = savedInstanceState.getInt("finalScore", finalScore);
         showFinalScore = savedInstanceState.getBoolean("showFinalScore", showFinalScore);
 
-        if (showFinalScore){
+        if (showFinalScore) {
             finish(null);
         }
 
